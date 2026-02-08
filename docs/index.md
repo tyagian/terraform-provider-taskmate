@@ -7,7 +7,7 @@ description: |-
 
 # TaskMate Provider
 
-The TaskMate provider allows Terraform to manage tasks through the TaskMate API. This provider is built with the Terraform Plugin Framework and supports full CRUD operations, data sources, and import functionality.
+The TaskMate provider allows Terraform to manage tasks through the TaskMate API. This provider is build for to manage taskmate-app github.com/tyagian/taskmate and to learn provider development. 
 
 ## Example Usage
 
