@@ -1,0 +1,19 @@
+# Configuration for terraform-plugin-docs
+# See: https://github.com/hashicorp/terraform-plugin-docs
+
+provider_name: taskmate
+
+# Rendered website directory
+rendered_provider_name: TaskMate
+
+# Rendered website subdirectory
+rendered_website_dir: docs
+
+# Examples directory
+examples_dir: examples
+
+# Resources to exclude from generation
+# resources: []
+
+# Data sources to exclude from generation
+# data_sources: []
