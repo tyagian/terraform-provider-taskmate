@@ -1,42 +1,16 @@
-version: "2"
-output:
-  formats:
-    tab:
-      path: stdout
-    junit-xml:
-      path: report.xml
+run:
+  timeout: 5m
+
 linters:
-  default: all
-  disable:
-    - depguard
-    - exhaustruct
-    - ginkgolinter
-    - gomodguard
-    - revive
-    - sloglint
-    - spancheck
-    - sqlclosecheck
-    - thelper
-    - varnamelen
-
-    # TMP - can be enabled later for stricter checks
-    - cyclop
-    - funlen
-    - godox
-    - wrapcheck
-
-    # Deprecated
-    - wsl
-
-  settings:
-    tagliatelle:
-      case:
-        rules:
-          json: snake
-          yaml: snake
-
-formatters:
+  disable-all: true
   enable:
     - gofmt
     - goimports
-    - golines
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+
+linters-settings:
+  goimports:
+    local-prefixes: github.com/hashicorp/terraform-provider-taskmate
