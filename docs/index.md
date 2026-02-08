@@ -15,26 +15,22 @@ The TaskMate provider allows Terraform to manage tasks through the TaskMate API.
 terraform {
   required_providers {
     taskmate = {
-      source = "hashicorp/taskmate"
+      source  = "tyagian/taskmate"
+      version = "~> 1.0"
     }
   }
 }
 
-# Token-based authentication
 provider "taskmate" {
   host  = "http://localhost:8080"
-  token = "your-generated-token-here"
+  token = var.taskmate_token
 }
 
-# Alternative: Using environment variable (Recommended)
-# Set: export TASKMATE_TOKEN="your-token"
-# provider "taskmate" {
-#   host = "http://localhost:8080"
-#   # token will be read from TASKMATE_TOKEN env var
-# }
-
-# Generate a token using:
-# curl -X POST http://localhost:8080/api/v1/auth/token
+variable "taskmate_token" {
+  type        = string
+  description = "TaskMate API token"
+  sensitive   = true
+}
 ```
 
 ## Authentication

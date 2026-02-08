@@ -19,7 +19,7 @@ terraform {
 
 provider "taskmate" {
   host  = "http://localhost:8080"
-  token = var.taskmate_token  # Set via: export TF_VAR_taskmate_token="your-token"
+  token = var.taskmate_token # Set via: export TF_VAR_taskmate_token="your-token"
 }
 
 variable "taskmate_token" {
